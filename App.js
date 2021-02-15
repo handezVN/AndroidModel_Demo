@@ -1,13 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
+import { ImageBackground, StyleSheet, Text, View , SafeAreaView} from 'react-native';
+import CartPage from './components/index.js'
+import StyleButton from './components/button.js'
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <CartPage 
+        name={"Model 3"}
+        tagline={"Order Online for "}
+        taglineCTA={"Touchless Delivery"}
+        image={require('./assets/images/Model3.jpeg')}
+      />
+      
+    </SafeAreaView>
   );
 }
 
@@ -17,5 +23,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-  },
+  }
 });
